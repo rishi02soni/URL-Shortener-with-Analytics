@@ -127,4 +127,84 @@ Increase Click Count
 Clicks received by short URLs.
 <img width="488" height="243" alt="image" src="https://github.com/user-attachments/assets/568f2a11-68e4-4f80-b562-bb64ff437f02" />
 
+# 🗄️ Database Schema
+```
+CREATE TABLE url_mapping (
+   id BIGINT PRIMARY KEY AUTO_INCREMENT,
+   original_url TEXT NOT NULL,
+   short_code VARCHAR(20) UNIQUE,
+   clicks BIGINT DEFAULT 0
+);
+```
+# 🌐 API Endpoints
+>Create Short URL
+```
+POST /shorten
+```
+Request Body
+```
+{
+  "originalUrl":"https://google.com"
+}
+```
+Response
+```
+http://localhost:8080/abc123
+```
+> Redirect URL
+```
+GET /abc123
+```
+# 🧠 Core Engineering Concepts Used
+```
+OOP Principles
+MVC Architecture
+Dependency Injection
+RESTful APIs
+Database Normalization
+JPA ORM Mapping
+Exception Handling
+Layered Architecture
+Scalable Design Thinking
+```
+---
+# 📈 Scalability Enhancements (Production Upgrade)
 
+Future enterprise upgrades:
+```
+✅ Redis Cache  
+✅ Kafka Event Streaming  
+✅ JWT Authentication  
+✅ Docker Deployment  
+✅ Kubernetes Scaling  
+✅ QR Code Generation  
+✅ URL Expiry  
+✅ Custom Alias  
+✅ Rate Limiting  
+✅ Geo Analytics  
+```
+---
+
+# 🔐 Security Considerations
+```
+✅ URL Validation  
+✅ SQL Injection Safe (JPA)  
+✅ Input Sanitization  
+✅ Rate Limiting  
+✅ HTTPS Deployment Ready  
+```
+---
+
+# ▶️ Run Project
+
+```
+mvn clean install
+mvn spring-boot:run
+```
+# 📜 License
+
+> MIT License
+
+# 👨‍💻 Author
+
+```Rishi Soni - rishi02soni```
