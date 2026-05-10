@@ -93,4 +93,38 @@ Increase Click Count
         ↓
 302 Redirect User
 ```
+---
+# Request Flow Chart
+```
+ ┌───────────────┐
+ │   User Client │
+ └──────┬────────┘
+        │
+        ▼
+┌──────────────────┐
+│ Spring Controller│
+└──────┬───────────┘
+       │
+       ▼
+┌──────────────────┐
+│ Service Layer    │
+│ Business Logic   │
+└──────┬───────────┘
+       │
+       ▼
+┌──────────────────┐
+│ Repository Layer │
+└──────┬───────────┘
+       │
+       ▼
+┌──────────────────┐
+│ MySQL Database   │
+└──────────────────┘
+```
+---
+# 📊 Analytics Graph
+> Sample Click Analytics
+Clicks received by short URLs.
+<img width="488" height="243" alt="image" src="https://github.com/user-attachments/assets/568f2a11-68e4-4f80-b562-bb64ff437f02" />
+
 
