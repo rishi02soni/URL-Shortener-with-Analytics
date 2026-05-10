@@ -4,7 +4,7 @@ Production-grade URL Shortener built using **Java, Spring Boot, MySQL, JPA, REST
 
 ---
 
-# 📌 Problem Statement
+#  Problem Statement
 
 Long URLs are difficult to share, track, and manage across platforms such as social media, emails, campaigns, and internal systems.
 
@@ -20,18 +20,18 @@ This project solves that by building a **production-ready URL Shortener Service*
 
 ---
 
-# 🚀 Features
+#  Features
 
-✅ Generate Short URLs  
-✅ Fast Redirection Engine  
-✅ Click Analytics Tracking  
-✅ Unique Short Code Generator  
-✅ MySQL Persistent Storage  
-✅ REST APIs  
-✅ Layered Architecture  
-✅ Production Ready Codebase  
-✅ Exception Handling  
-✅ Scalable Design
+- Generate Short URLs  
+- Fast Redirection Engine  
+- Click Analytics Tracking  
+- Unique Short Code Generator  
+- MySQL Persistent Storage  
+- REST APIs  
+- Layered Architecture  
+- Production Ready Codebase  
+- Exception Handling  
+- Scalable Design
 
 ---
 
@@ -49,7 +49,7 @@ This project solves that by building a **production-ready URL Shortener Service*
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```
 src/main/java/com/project/urlshortener/
@@ -71,3 +71,26 @@ src/main/java/com/project/urlshortener/
 
 └── UrlShortenerApplication.java
 ```
+# System Workflow
+```
+User submits Long URL
+        ↓
+POST /shorten API
+        ↓
+Generate Unique Short Code
+        ↓
+Store in MySQL
+        ↓
+Return Short URL
+
+User opens Short URL
+        ↓
+GET /{code}
+        ↓
+Fetch Original URL
+        ↓
+Increase Click Count
+        ↓
+302 Redirect User
+```
+
